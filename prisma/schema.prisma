@@ -1,0 +1,60 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["jsonProtocol"]
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL")
+  directUrl         = env("POSTGRES_URL_NON_POOLING")
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Account {
+  id         String    @id @default(cuid())
+  username   String
+  xpub       String?
+  recevingad String?
+  currency   String    @default("USD")
+  balance    Decimal       @default(0.000000)
+  conversion Decimal?
+  userId     String?   @unique
+  user       User?     @relation(fields: [userId], references: [id])
+  addresses  Address[]
+
+  @@map(name: "accounts")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  name      String    @unique
+  email     String    @unique
+  password  String
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  account   Account?
+  addresses Address[]
+
+  @@map(name: "users")
+}
+
+model Address {
+  id        String  @id @default(cuid())
+  userId    String
+  user      User    @relation(fields: [userId], references: [id])
+  accountId String 
+  account   Account @relation(fields: [accountId], references: [id])
+}
+
+model Transaction{
+ id               String  @id @default(cuid())
+ transactiontype  String?
+ userId    String?
+  user      User ?   @relation(fields: [userId], references: [id])
+  accountId String?
+  account   Account? @relation(fields: [accountId], references: [id])
+  addressID  String? 
+  address    Address? @relation(fields: [addressId], references: [id])
+  Amount     Decimal?
+  Status     String? 
+  }
