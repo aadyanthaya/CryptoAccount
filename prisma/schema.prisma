@@ -46,15 +46,3 @@ model Address {
   account   Account @relation(fields: [accountId], references: [id])
 }
 
-model Transaction{
- id               String  @id @default(cuid())
- transactiontype  String?
- userId    String?
-  user      User ?   @relation(fields: [userId], references: [id])
-  accountId String?
-  account   Account? @relation(fields: [accountId], references: [id])
-  addressID  String? 
-  address    Address? @relation(fields: [addressId], references: [id])
-  Amount     Decimal?
-  Status     String? 
-  }

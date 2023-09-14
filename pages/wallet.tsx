@@ -4,6 +4,8 @@ import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
+
+
 import prisma from '../lib/prisma';
 
 function Wallet() {
@@ -253,16 +255,6 @@ function Wallet() {
         `}
       </style>
 
-      <div className="logo-container">
-        <Image
-          src="/6.png"
-          alt="Image Above Container"
-          className="above-container-image"
-          width={300}
-          height={50}
-        />
-      </div>
-
       <div className="outer-container">
         <div className="wallet-container">
           <div>
@@ -303,20 +295,6 @@ function Wallet() {
               <div>
                 <label>Username:</label>
                 <input type="text" value={accountData.username} readOnly />
-                <br />
-                <label>XPUB :</label>
-                <input
-                  type="text"
-                  value={xpub}
-                  onChange={(e) => setXpub(e.target.value)}
-                />
-                <br />
-                <label>Receving wallet Address :</label>
-                <input
-                  type="text"
-                  value={seed}
-                  onChange={(e) => setSeed(e.target.value)}
-                />
                 <br />
                 <label>Currencey Type :</label>
                 <input

@@ -8,7 +8,7 @@ export default async function handle(req, res) {
   const result = await fetch('https://www.blockonomics.co/api/new_address', {
     method: 'POST',
     headers: {
-      Authorization: 'Bearer qgR6IUBf0XqcvNtR1tgydy8ReotUGRi6gpg5sEsRggY',
+      Authorization: 'API Key will go here ',
     },
     body: '',
   });
