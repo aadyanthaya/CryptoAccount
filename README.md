@@ -1,7 +1,11 @@
 # Crypto Accounts 
 
 
-https://github.com/aadyanthaya/CryptoAccount/assets/91294460/bb273f82-e65c-41b9-bb9b-d2f6c4811068
+
+https://github.com/aadyanthaya/CryptoAccount/assets/91294460/b767af8f-7641-4714-9a58-650f9993a668
+
+
+
 
 
 This project allows users to create/manage Bitcoin accounts. Users can deposit/withdraw bitcoin into their account similarly to bitcoin exchanges. Crypto accounts system is an integral part of any crypto exchange/crypto games application.
@@ -11,7 +15,7 @@ Functionality Overview
 Setup:
 First,  start my wallet service which creates a new wallet and gives me an Xpub
 Then  setup the store in the blockonomics using the above xpub
-then I add the api key from blockonomics to my webapp.
+Then  add the api key from blockonomics to my webapp.
 
 Login:
 Now  load my web app
