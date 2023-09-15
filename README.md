@@ -12,25 +12,44 @@ https://github.com/aadyanthaya/CryptoAccount/assets/91294460/cdb32d37-bec0-40db-
 
 
 
-This project allows users to create/manage Bitcoin accounts. Users can deposit/withdraw bitcoin into their account similarly to bitcoin exchanges. Crypto accounts system is an integral part of any crypto exchange/crypto games application.
+# Crypto Accounts System
 
-Functionality Overview
+This project allows users to create and manage Bitcoin accounts. It provides functionalities similar to Bitcoin exchanges, and is an essential component for any crypto exchange or crypto gaming application.
 
-Setup:
-First,  start my wallet service which creates a new wallet and gives me an Xpub
-Then  setup the store in the blockonomics using the above xpub
-Then  add the api key from blockonomics to my webapp.
+## Table of Contents
 
-Login:
-Now  load my web app
-then create an account by signing up in the crypto account which creates an account in the database
-then it takes you to the account page where he/she can select the currency and see wallet details.
+1. [Functionality Overview](#functionality-overview)
+2. [Setup](#setup)
+3. [Login](#login)
+4. [Deposit](#deposit)
+5. [Withdrawal](#withdrawal)
 
-Deposit:
-then you go to the deposit tab which uses new_address api and using that address, I goto testbench and make a deposit.
-then have a callback URL which gets updated and I update the DB with the new balance.
+## Functionality Overview
 
-Withdrawal:
-The user clicks on the withdraw button which asks for an address and BTC.
-Once the details are entered, I use wallet_service and make a transfer request.
-This gives me transaction details and I show it to the user.
+This section provides an overview of the various functionalities offered by the Crypto Accounts System.
+
+### Setup
+
+1. **Start Wallet Service**: Initialize your wallet service, which will create a new wallet and provide you with an Xpub key.
+2. **Blockonomics Setup**: Use the generated Xpub key to set up your store in Blockonomics.
+3. **API Key**: Add the API key from Blockonomics to your web application.
+
+### Login
+
+1. **Load Web App**: Open your web application in a browser.
+2. **Account Creation**: Sign up to create a crypto account, which will also create an account record in the database.
+3. **Account Page**: After signing up, you will be redirected to the account page where you can select your currency and view wallet details.
+
+### Deposit
+
+1. **Navigate to Deposit Tab**: Here, the `new_address` API is used to generate a new Bitcoin address.
+2. **Testbench Deposit**: Use the newly generated address to make a deposit using a testbench.
+3. **Callback URL**: A callback URL will be triggered upon deposit, which will update your database with the new balance.
+
+### Withdrawal
+
+1. **Initiate Withdrawal**: Click on the 'Withdraw' button, which will prompt you to enter a Bitcoin address and the amount of BTC to withdraw.
+2. **Transfer Request**: Use the `wallet_service` to initiate the withdrawal.
+3. **Transaction Details**: You will receive transaction details which will be displayed to the user.
+
+
