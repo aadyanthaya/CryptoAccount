@@ -12,27 +12,21 @@ https://github.com/aadyanthaya/CryptoAccount/assets/91294460/cdb32d37-bec0-40db-
 
 
 
-# Crypto Accounts System
+# Functionality Overview 
 
 This project allows users to create and manage Bitcoin accounts. It provides functionalities similar to Bitcoin exchanges, and is an essential component for any crypto exchange or crypto gaming application.
-
-## Table of Contents
-
-1. [Functionality Overview](#functionality-overview)
-2. [Setup](#setup)
-3. [Login](#login)
-4. [Deposit](#deposit)
-5. [Withdrawal](#withdrawal)
-
-## Functionality Overview
-
-This section provides an overview of the various functionalities offered by the Crypto Accounts System.
 
 ### Setup
 
 1. **Start Wallet Service**: Initialize your wallet service, which will create a new wallet and provide you with an Xpub key.
 2. **Blockonomics Setup**: Use the generated Xpub key to set up your store in Blockonomics.
 3. **API Key**: Add the API key from Blockonomics to your web application.
+
+## Table of Contents
+1. [Login](#login)
+2. [Deposit](#deposit)
+3. [Withdrawal](#withdrawal)
+
 
 ### Login
 
